@@ -1,0 +1,43 @@
+<div class="card">
+    <div class="card-header">
+        {{pageTitle}}
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class=" col-md-2">Filter by:</div>
+            <div class="col-md-4">
+                <input type="text" 
+                [(ngModel)]="listFilter"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Filtered by: {{listFilter}}</h4>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <!-- ngif checks to see if there are values in questions "length checks for content"-->
+            <table class="table" *ngIf="questions.length">
+                <thead>
+                    <tr>
+
+                        <th>Truth</th>
+                        <th>Dare</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- ngFor loops the questions class to get all data-->
+                    <tr *ngFor="let question of filteredQuestions">
+                        <!-- Create a List for questions assets defined at question-list.component.ts -->
+                        
+                        <td>{{question.TruthQuestions }}</td>
+                        <td>{{question.DareTasks  }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+</div>
