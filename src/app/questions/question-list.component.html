@@ -6,8 +6,7 @@
         <div class="row">
             <div class=" col-md-2">Filter by:</div>
             <div class="col-md-4">
-                <input type="text" 
-                [(ngModel)]="listFilter"/>
+                <input type="text" />
             </div>
         </div>
         <div class="row">
@@ -20,7 +19,6 @@
             <table class="table" *ngIf="questions.length">
                 <thead>
                     <tr>
-
                         <th>Truth</th>
                         <th>Dare</th>
                     </tr>
@@ -29,7 +27,6 @@
                     <!-- ngFor loops the questions class to get all data-->
                     <tr *ngFor="let question of filteredQuestions">
                         <!-- Create a List for questions assets defined at question-list.component.ts -->
-                        
                         <td>{{question.TruthQuestions }}</td>
                         <td>{{question.DareTasks  }}</td>
 
